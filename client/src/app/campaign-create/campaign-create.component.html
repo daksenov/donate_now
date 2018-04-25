@@ -10,7 +10,7 @@
     <div class="form-group">
       <label for="title">Campaign Title</label>
       <input type="text" class="form-control" id="title" aria-describedby="titeHelp"
-             placeholder="Campaign title..." formControlName="title">
+             placeholder="Title..." formControlName="title">
       <small id="titeHelp" class="form-text text-muted">
         Your campaign title.
       </small>
@@ -19,9 +19,9 @@
     <div class="form-group">
       <label for="coverImageUrl">Cover Image URL</label>
       <input type="text" class="form-control" id="coverImageUrl" aria-describedby="imageHelp"
-             placeholder="Url to photo..." formControlName="cover_image_url">
+             placeholder="URL..." formControlName="cover_image_url">
       <small id="imageHelp" class="form-text text-muted">
-        Url for photo which will be used as campaign cover photo.
+        URL for photo which will be used as campaign cover photo.
       </small>
     </div>
 
@@ -31,8 +31,10 @@
       <textarea class="form-control" id="description" rows="3" formControlName="body"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary col-md-10" [ngClass]="{'disabled': loading}"
-            (click)="createCampaign($event)" [disabled]="loading">Create Campaign</button>
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary col-md-10" [ngClass]="{'disabled': loading}"
+              (click)="createCampaign($event)" [disabled]="loading">Create Campaign</button>
+    </div>
   </form>
 
 </div>

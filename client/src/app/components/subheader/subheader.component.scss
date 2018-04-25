@@ -2,10 +2,10 @@
   background-color: #116FE5;
 }
 
-.navbar-brand {
-  margin: 0 auto;
-}
-
 nav {
   height: calc(3rem + 1px);
+
+  .navbar-brand {
+    margin: 0 auto;
+  }
 }

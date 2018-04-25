@@ -1,4 +1,8 @@
 .transactions-list {
   margin-bottom: 70px;
   overflow-y: auto;
+
+  div[transactions-list-item]:not(:last-child) {
+    border-bottom: 1px solid #F2F3F4;
+  }
 }
