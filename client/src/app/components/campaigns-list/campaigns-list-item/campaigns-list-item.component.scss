@@ -3,19 +3,18 @@
   max-width: 100%;
 }
 
-
 .campaign-details {
   padding-top: 1rem;
-}
 
-.campaign-details h4 {
+  .campaign-transactions-list {
+    margin-top: 20px;
+    height: 300px;
+    overflow-y: scroll;
 
-}
-
-.campaign-transactions-list {
-  margin-top: 20px;
-  height: 300px;
-  overflow-y: scroll;
+    div[transactions-list-item]:not(:last-child) {
+      border-bottom: 1px solid #F2F3F4;
+    }
+  }
 }
 
 .donate-button-wrapper {

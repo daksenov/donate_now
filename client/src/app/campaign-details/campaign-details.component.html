@@ -1,17 +1,18 @@
 <subheader title="Campaign Details"></subheader>
 
-<div class="campaign-details">
+<div class="campaign-details row">
 
 
   <ng-container *ngIf="!loading; else loadingScreen">
-    <campaigns-list-item *ngIf="campaign; else notFound" [campaign]="campaign" [details]="true">
+    <campaigns-list-item *ngIf="campaign; else notFound" [campaign]="campaign" [details]="true"
+                         class="col-sm-12">
     </campaigns-list-item>
   </ng-container>
 
 
   <ng-template #notFound>
     <div>
-      Sorry but selected campaign not found :(
+      Sorry but selected campaign not found
     </div>
   </ng-template>
 

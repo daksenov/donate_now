@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { TransactionModel } from '../../../services/models/transaction.model';
 
 @Component({
-  selector: 'transactions-list-item',
+  selector: 'transactions-list-item,[transactions-list-item]',
   templateUrl: './transactions-list-item.component.html',
   styleUrls: [
     './transactions-list-item.component.scss',

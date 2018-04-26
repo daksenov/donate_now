@@ -1,9 +1,15 @@
 <div (click)="redirectToDetails($event)">
 
   <img class="campaign-cover" *ngIf="campaign.cover_image_url" src="{{ campaign.cover_image_url }}">
-  <h4>{{ campaign.title }}</h4>
-  <span class="text-hide">{{ campaign.dateCreated() }}</span>
-  <p>{{ campaign.body }}</p>
+
+  <h4 class="mt-1">{{ campaign.title }}</h4>
+  <div class="text-muted text-right">
+      {{ campaign.dateCreated() }} by @{{ campaign.user_id }}
+  </div>
+
+  <div class="my-3">
+    {{ campaign.body }}
+  </div>
 
   <div>
     Total donated: {{ campaign.amount_sbd | number }} SBD
@@ -14,11 +20,16 @@
   </div>
 
   <div *ngIf="details" class="campaign-details">
-    <h4>Recent Transaction:</h4>
-    <div class="campaign-transactions-list">
-      <transactions-list-item *ngFor="let item of campaign.transactions" [transaction]="item">
-      </transactions-list-item>
+    <b>Recent Donations:</b>
+    <div class="campaign-transactions-list" *ngIf="campaign.transactions?.length; else noDonations">
+      <div transactions-list-item *ngFor="let item of campaign.transactions" [transaction]="item">
+      </div>
     </div>
+
   </div>
 
 </div>
+
+<ng-template #noDonations>
+  <span class="text-muted">There are no donations yet</span>
+</ng-template>

@@ -1,13 +1,14 @@
-<div class="transaction-item">
+<div class="transaction-item p-2 mx-1">
 
   <ng-container *ngIf="transaction.isSend()">
-    <div class="item-details">
+    <div class="item-details pt-2">
       <div class="amount negative">
         {{ transaction.amount_sbd | number }}
       </div>
 
       <div class="timestamp text-muted">{{ transaction.dateCreated() }} to
-        <img src="https://steemitimages.com/u/{{ transaction.counterparty }}/avatar"
+        <img title="@{{ transaction.counterparty }}"
+             src="https://steemitimages.com/u/{{ transaction.counterparty }}/avatar"
              class="rounded-circle">
       </div>
     </div>
@@ -25,10 +26,11 @@
 
 
     <div>
-      <img src="https://steemitimages.com/u/{{ transaction.counterparty }}/avatar"
+      <img title="@{{ transaction.counterparty }}"
+           src="https://steemitimages.com/u/{{ transaction.counterparty }}/avatar"
            class="rounded-circle">
 
-      <div class="comment arrow_box">
+      <div class="comment arrow_box ml-1">
         <span>{{ transaction.comment }}</span>
       </div>
     </div>

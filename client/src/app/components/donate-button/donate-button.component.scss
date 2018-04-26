@@ -4,9 +4,7 @@
 }
 
 .donate-details {
-
-}
-
-.donate-details.hidden {
-  display: none;
+  &.hidden {
+    display: none;
+  }
 }
